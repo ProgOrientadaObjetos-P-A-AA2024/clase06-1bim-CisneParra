@@ -16,6 +16,10 @@ public class Ejecutor {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        
+        String marcaCm, marcaPr, marcaMm;
+        double costoPr, costoM;
+        int num;
+        ArrayList <Computador> computadoras = new ArrayList<>();
+
     }
 }
