@@ -34,4 +34,11 @@ public class Profesor {
     public String obtenerTipo() {
         return tipo;
     }
+    @Override 
+    public String toString(){
+        String cadena = String.format("-----------------------------\n"
+                + "%s - %s\n",
+                obtenerNombre(),obtenerTipo());
+        return cadena;
+    }
 }
