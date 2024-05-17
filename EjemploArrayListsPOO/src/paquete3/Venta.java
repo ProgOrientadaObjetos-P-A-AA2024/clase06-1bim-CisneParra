@@ -39,4 +39,24 @@ public class Venta {
         return computadoras;
     }
 
+    @Override
+    public String toString() {
+        String cadena = "Informe de ventas:\n-----------------------------\n";
+        for (int i = 0; i < computadoras.size(); i++) {
+            cadena = String.format("%s"
+                    + "Marca del computador: %s\n"
+                    + "Procesador: %s\n"
+                    + "Memoria: %s\n"
+                    + "Costo del computador: %.2f\n"
+                    + "------------------------------------------\n", cadena,
+                    computadoras.get(i).obtenerMarca(),
+                    computadoras.get(i).obtenerProcesador().obtenerMarca(),
+                    computadoras.get(i).obtenerMemoria().obtenerMarca(),
+                    computadoras.get(i).obtenerCostoC());
+        }
+        cadena = String.format("%sValor total de las ventas: %.2f\n", cadena,
+                obtenerValorVenta());
+        return cadena;
+    }
+
 }
