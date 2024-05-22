@@ -80,6 +80,8 @@ public class ArchivoLectura {
 
                 ArrayList<String> cadenaProfesor = new ArrayList<>(
                         Arrays.asList(profesor.split("\\|")));
+                // el doble back slash se utiliza para poner cualquier caracter
+                // distinto de punto y coma
                 // ["Tara Hernandez", "contratado"]
                 //        0                 1
 
