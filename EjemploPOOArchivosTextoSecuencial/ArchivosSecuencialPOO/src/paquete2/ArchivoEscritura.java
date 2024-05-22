@@ -24,7 +24,7 @@ public class ArchivoEscritura {
     public ArchivoEscritura(String n) {
         nombreArchivo = n;
         rutaArchivo = String.format("data/%s", nombreArchivo); // "data/profesores2.txt"
-        
+
     }
 
     public void establecerNombreArchivo(String n) {
@@ -57,16 +57,16 @@ public class ArchivoEscritura {
         try {
             salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
             Profesor p = obtenerRegistro();
-            
+
             String cadenaRegistro = String.format("%s;%s",
                     p.obtenerNombre(), p.obtenerTipo());
-            
+            // crea una cadena para enviar el archivo de texto
             salidaArchivo.format("%s\n", cadenaRegistro);
             salidaArchivo.close();
         } catch (IOException e) {
             System.err.println("Error al crear el archivo.");
             System.err.println(e);
-
+            
         }
 
     }
