@@ -15,14 +15,14 @@ import java.util.Formatter;
 
 import paquete1.Profesor;
 
-public class ArchivoEscritura1 {
+public class ArchivoEscritura {
 
     private String nombreArchivo;
     private String rutaArchivo;
     private Empresa registro;
     private Formatter salidaArchivo;
 
-    public ArchivoEscritura1(String n) {
+    public ArchivoEscritura(String n) {
         nombreArchivo = n;
         rutaArchivo = String.format("data/%s", nombreArchivo); // "data/profesores2.txt"
 

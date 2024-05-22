@@ -13,14 +13,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import paquete1.Profesor;
 
-public class ArchivoLectura1 {
+public class ArchivoLectura {
 
     private Scanner entrada;
     private String nombreArchivo;
     private String rutaArchivo;
     private ArrayList<Empresa> lista;
 
-    public ArchivoLectura1(String n) {
+    public ArchivoLectura(String n) {
         nombreArchivo = n;
         rutaArchivo = String.format("data/%s", nombreArchivo);
 
@@ -90,7 +90,7 @@ public class ArchivoLectura1 {
 
     @Override
     public String toString() {
-        String cadena = "Lista Profesores\n";
+        String cadena = "Lista Ciudades\n";
         for (int i = 0; i < obtenerLista().size(); i++) {
             Empresa pr = obtenerLista().get(i); // Obj. Profesor
             cadena = String.format("%s %s %s\n", cadena,
